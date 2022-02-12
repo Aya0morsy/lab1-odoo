@@ -1,0 +1,44 @@
+<odoo>
+<data>
+<record id="action_patient" model="ir.actions.act_window">
+<field name="name">patient</field>
+<field name="res_model">hms.patient</field>
+</record>
+
+
+<record id="hms_patient_form_view" model="ir.ui.view">
+ <field name="name">HMS patient form view</field>
+ <field name="model">hms.patient</field>
+ <field name="arch" type="xml">
+  <form>
+    <sheet>
+        <group>
+           <field name="firstname"/>
+           <field name="lastname"/>
+           <field name="birthdate"/>
+        </group>
+
+        <group>
+           <field name="history"/>
+        </group>
+
+        <group>
+           <field name="CRradio"/>
+           <field name="BloodType"/>
+           <field name="address"/>
+        </group>
+            
+        <group>
+           <field name="image"/>
+           <field name="age"/>
+        </group>
+      </sheet>
+      </form>
+      </field>      
+      </record>  
+
+<menuitem id="hms_menu" name="Hospital management system"/>
+<menuitem id="hms_patient_menu" parent="hms_menu" action="action_patient"/>
+
+</data>
+</odoo>
